@@ -1,0 +1,25 @@
+.wrapper {
+    max-width: 70rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+
+    display: grid;
+    grid-template-columns: 256px 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* Quando a tela for menor que 768px */
+@media (max-width: 768px) {
+    /* Por ter usado a medida "rem" em todos os tamanhos da aplicação
+     agora podemos redefinir o tamanho da fonte dessa forma > */
+     /*  16px -> 100%
+         14px -> x = 87.5% */
+    html{
+        font-size: 87.5%;
+    }
+
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+}
